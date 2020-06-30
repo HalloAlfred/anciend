@@ -1,24 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation
+} from "react-router-dom";
+
+import HomePage from "./Pages/Home"
+import AboutPage from "./Pages/About"
+import ServicesPage from "./Pages/Services"
+import ProductApp from "./Pages/ProductApp"
+import Header from "./Components/Header"
+import Footer from "./Components/Footer"
 
 function App() {
+
+  {/*
+    isMobileMenuToggled
+    isOnProductApp
+  */}
+  const location = useLocation()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      { location.pathname !== "/productapp" && <Header /> }
+      <Switch>
+        <Route path="/productapp">
+          <ProductApp />
+        </Route>
+        <Route path="/about">
+          <AboutPage />
+        </Route>
+        <Route path="/services">
+          <ServicesPage />
+        </Route>
+        <Route path="/">
+          <HomePage />
+        </Route>
+      </Switch>
+      { location.pathname !== "/productapp" && <Footer /> }
     </div>
   );
 }
