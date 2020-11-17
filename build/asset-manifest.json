@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/anciend/static/css/main.62728c12.chunk.css",
+    "main.js": "/anciend/static/js/main.ba48ac7f.chunk.js",
+    "main.js.map": "/anciend/static/js/main.ba48ac7f.chunk.js.map",
+    "runtime-main.js": "/anciend/static/js/runtime-main.acd25021.js",
+    "runtime-main.js.map": "/anciend/static/js/runtime-main.acd25021.js.map",
+    "static/js/2.5d9d197d.chunk.js": "/anciend/static/js/2.5d9d197d.chunk.js",
+    "static/js/2.5d9d197d.chunk.js.map": "/anciend/static/js/2.5d9d197d.chunk.js.map",
+    "index.html": "/anciend/index.html",
+    "precache-manifest.a024c3da83d95e7de4039e9f21fb1c56.js": "/anciend/precache-manifest.a024c3da83d95e7de4039e9f21fb1c56.js",
+    "service-worker.js": "/anciend/service-worker.js",
+    "static/css/main.62728c12.chunk.css.map": "/anciend/static/css/main.62728c12.chunk.css.map",
+    "static/js/2.5d9d197d.chunk.js.LICENSE.txt": "/anciend/static/js/2.5d9d197d.chunk.js.LICENSE.txt",
+    "static/media/about_SVG.svg": "/anciend/static/media/about_SVG.c4acb596.svg",
+    "static/media/building.jpg": "/anciend/static/media/building.01acf875.jpg",
+    "static/media/coding.svg": "/anciend/static/media/coding.c1a95f73.svg",
+    "static/media/completed.svg": "/anciend/static/media/completed.8cd40d26.svg",
+    "static/media/contact.svg": "/anciend/static/media/contact.64fb8a6c.svg",
+    "static/media/developer.png": "/anciend/static/media/developer.0a5e21cc.png",
+    "static/media/developer1.png": "/anciend/static/media/developer1.e466f68e.png",
+    "static/media/developer2.png": "/anciend/static/media/developer2.7919b2cb.png",
+    "static/media/developer3.png": "/anciend/static/media/developer3.ff1c5c50.png",
+    "static/media/hero_illustration.svg": "/anciend/static/media/hero_illustration.3a25a6f7.svg",
+    "static/media/hero_text.svg": "/anciend/static/media/hero_text.e6e8a190.svg",
+    "static/media/man_hr.png": "/anciend/static/media/man_hr.22f64e46.png",
+    "static/media/man_hr1.png": "/anciend/static/media/man_hr1.cd1096f3.png",
+    "static/media/man_hr2.png": "/anciend/static/media/man_hr2.f32f4fec.png",
+    "static/media/planning.svg": "/anciend/static/media/planning.26e52cd1.svg",
+    "static/media/woman_hr.png": "/anciend/static/media/woman_hr.24313980.png",
+    "static/media/woman_hr1.png": "/anciend/static/media/woman_hr1.d5b2ee1c.png",
+    "static/media/woman_owner.png": "/anciend/static/media/woman_owner.d456f4fb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.acd25021.js",
+    "static/js/2.5d9d197d.chunk.js",
+    "static/css/main.62728c12.chunk.css",
+    "static/js/main.ba48ac7f.chunk.js"
+  ]
+}
