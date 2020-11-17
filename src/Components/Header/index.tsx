@@ -13,7 +13,6 @@ interface LinkItemProps {
 
 const Wrapper = styled.div`
     display: flex;
-    /* justify-content: center; */
     z-index: 10;
     background: transparent;
     height: 100px;
@@ -37,12 +36,14 @@ const InnerWrapper = styled.div`
 `;
 
 const Title = styled.h1`
+    user-select: none;
 `;
 
 const NavMenu = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     flex-basis: 70%;
 
     @media (max-width: 460px) {
@@ -63,6 +64,8 @@ const LinkItem = styled.li<LinkItemProps>`
     background-color: ${({ active }) => active && "#00ffffff"  };
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 
     a {
         color: black;
@@ -71,9 +74,6 @@ const LinkItem = styled.li<LinkItemProps>`
         height: 100%;
         width: 100%;
         font-family: 'Source Code Pro', monospace;
-    }
-
-    &:hover {
     }
 `;
 
@@ -100,9 +100,11 @@ const MobileNavMenuWrapper = styled.div`
 
 const AppButton = styled.div`
     height: 100%;
-    background: tomato;
+    background: #6c63ffff;
     padding-left: 25px;
     padding-right: 25px;
+    padding-bottom: 4px;
+    padding-top: 4px;
     border-radius: 10px;
     
     a {
@@ -116,35 +118,26 @@ const AppButton = styled.div`
 `;
 
 function Header() {
-
     let route = useLocation();
     const [mobileMenuToggled, toggleMobileMenu] = useState(false);
 
     return (
         <Wrapper>
             <InnerWrapper>
-
                 <Title>Anciend</Title>
-
                 <NavMenu>
                     <LinkList>
                         <LinkItem active={route.pathname === "/" ? true : false}><Link to="/">Home</Link></LinkItem>
                         <LinkItem active={route.pathname === "/about" ? true : false}><Link to="/about">About</Link></LinkItem>
                         <LinkItem active={route.pathname === "/services" ? true : false}><Link to="/services">Services</Link></LinkItem>
                     </LinkList>
-                    <AppButton><Link to="/productapp">App</Link></AppButton>
+                    <AppButton><Link to="/productapp" style={{color:"white"}}>App</Link></AppButton>
                 </NavMenu>
-
-                
-
                 <MobileNavMenu>
                     <FontAwesomeIcon icon={ faBars } color="black" size="2x" onClick={() => toggleMobileMenu(true)} />
                 </MobileNavMenu>
-                
             </InnerWrapper>
-
             { mobileMenuToggled && <MobileNavMenuWrapper></MobileNavMenuWrapper> }
-
         </Wrapper>
     )
 }

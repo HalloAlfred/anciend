@@ -95,7 +95,7 @@ function Footer() {
         <Wrapper>
             <InnerWrapper>
                 <LeftWrapper>
-                    <FooterTitle>Going somewhere you can't find?</FooterTitle>
+                    <FooterTitle>Going somewhere?</FooterTitle>
                     <CompanyTitle>Anciend</CompanyTitle>
                 </LeftWrapper>
                 <RightWrapper>

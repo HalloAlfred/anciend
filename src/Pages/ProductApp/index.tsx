@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styled from "styled-components"
 import { Wrapper, InnerWrapper, ButtonGroup } from './components'
 import SubmitButton from '../../Components/FormItems/SubmitButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,6 +7,7 @@ import {
     Link
 } from "react-router-dom";
 
+import EntrySlide from "./Slides/entryslide"
 import FirstSlide from "./Slides/firstslide"
 import SecondSlide from "./Slides/secondslide"
 import ThirdSlide from "./Slides/thirdslide"
@@ -27,8 +27,15 @@ function ProductApp() {
 
     }
 
+    function handleNextSlide(slideNumber: number, ) {
+        setSlide(slideNumber)
+
+        if (activeSlide === 3) {
+            sessionStorage.setItem('saved_projects', JSON.stringify(formResults));
+        }
+    }
+
     function handleChange(value:any, formResultKey:any) {
-        console.log(value)
         if (formResultKey === "productType")
             setFormResults({ ...formResults, productType: value })
         if (formResultKey === "productPrice")
@@ -44,15 +51,16 @@ function ProductApp() {
             </div>
             <InnerWrapper>
 
-                {activeSlide === 0 && <FirstSlide handleChange={handleChange} />}
-                {activeSlide === 1 && <SecondSlide handleChange={handleChange} />}
-                {activeSlide === 2 && <ThirdSlide handleChange={handleChange} />}
-                {activeSlide === 3 && <CompletedSlide />}
+                {activeSlide === 0 && <EntrySlide /> }
+                {activeSlide === 1 && <FirstSlide handleChange={handleChange} />}
+                {activeSlide === 2 && <SecondSlide handleChange={handleChange} />}
+                {activeSlide === 3 && <ThirdSlide handleChange={handleChange} />}
+                {activeSlide === 4 && <CompletedSlide />}
             
                 <ButtonGroup>
-                    {activeSlide !== 0 && <SubmitButton buttonText="Back" handleClick={() => setSlide(activeSlide - 1)} /> }
-                    {activeSlide !== 3 && <SubmitButton buttonText="Next" handleClick={() => setSlide(activeSlide + 1)} /> }
-                    {activeSlide === 3 && <SubmitButton buttonText="Done!" handleClick={() => console.log(formResults)} />} 
+                    {activeSlide !== 0 && <SubmitButton buttonText="Back" handleClick={() => handleNextSlide(activeSlide - 1)} /> }
+                    {activeSlide !== 4 && <SubmitButton buttonText="Next" handleClick={() => handleNextSlide(activeSlide + 1)} /> }
+                    {activeSlide === 4 && <SubmitButton buttonText="Done!" handleClick={() => handleNextSlide(0)} />} 
                 </ButtonGroup>
                 
             </InnerWrapper>

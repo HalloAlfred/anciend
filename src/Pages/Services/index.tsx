@@ -2,42 +2,18 @@ import React from 'react'
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-    height: 100vh;
     width: 100%;
 `;
 
-{/* 
-
-    Planning & Analysis {
-        Workshops
-        Data gathering
-        Målgruppsanalys
-
-    }
-
-    Development {
-        Wordpress
-        Shopify
-        Mobile app development
-    } 
-    
-    Marketing {
-        SEO
-    }
-
-    Design {
-        SEO
-        Responsive
-        UX
-    }
-        
-    Service/support
-*/}
+const Hero = styled.div`
+    width: 100%;
+    height: 90vh;
+`;
 
 function ServicesPage() {
     return (
         <Wrapper>
-            
+            <Hero></Hero>
         </Wrapper>
     )
 }

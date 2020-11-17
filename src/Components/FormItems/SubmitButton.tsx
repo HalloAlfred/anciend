@@ -6,7 +6,7 @@ const ButtonWrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: #00ffffff;
+    background: #6c63ff;
     cursor: pointer;
     height: 50px;
     width: 30%;
@@ -14,7 +14,7 @@ const ButtonWrapper = styled.div`
     border-radius: 10px;
 
     &:hover {
-        background: #00f0f0;
+        background: #6058e8;
     }
 `;
 

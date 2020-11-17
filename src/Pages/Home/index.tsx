@@ -65,14 +65,6 @@ const SectionColumn = styled.div`
 
 const ReviewItem = styled.div``
 
-{/* 
-    Hero
-    Workflow
-    Kundcase/work
-    Awards/prizes
-    Contact
-*/}
-
 
 function HomePage() {
     return (

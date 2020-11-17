@@ -7,14 +7,12 @@ interface QuestionMultiChoiceItemProps {
     active?: boolean;
 }
 
-
-
 export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     height: 100vh;
     width: 100vw;
-    background: #00ffffff;
+    background: #6c63ffff;
 `;
 
 export const InnerWrapper = styled.div`
@@ -61,11 +59,11 @@ export const QuestionMultiChoiceItem = styled.div<QuestionMultiChoiceItemProps>`
     background: ${({ active }) => active && "white"};
 
     &:hover {
-        background: ${({ active }) => !active && "#00f0f0"};
+        background: ${({ active }) => !active && "#6058e8"};
     }
 
     p {
-        color: ${({ active }) => active && "#00ffffff"}
+        color: ${({ active }) => active && "#6c63ffff"}
     }
 `; 
 
@@ -75,7 +73,6 @@ export const QuestionMultiChoiceText = styled.p`
     font-family: 'Source Code Pro', monospace;
 `;
 
-{/* Checkbox */}
 export const CheckboxWrapper = styled.div``
 
 export const CheckboxList = styled.div``;
